@@ -22,6 +22,14 @@ public class User {
 
     }
 
+
+    public User(Long id, String name, String lastName, Byte age) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
     public User(String name, String lastName, Byte age) {
         this.name = name;
         this.lastName = lastName;
@@ -58,5 +66,11 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        String user = "Id=" + getId() + " Name-" + getName() + " LastName-" + getLastName() + " Age-" + getAge();
+        return user;
     }
 }
